@@ -279,7 +279,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc
 
 # QRNGD
-PRODUCT_PACKAGES += qrngd
+#PRODUCT_PACKAGES += qrngd
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
