@@ -3,4 +3,4 @@
 allow appdomain gpu_device:chr_file rw_file_perms;
 
 # Some live wallpapers need.
-allow shared_app gpu_device:chr_file execute;
+allow appdomain gpu_device:chr_file execute;
