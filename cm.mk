@@ -1,3 +1,6 @@
+#Uncomment following line for odex
+#WITH_DEXPREOPT := true
+
 ## Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/gsm.mk)
 
