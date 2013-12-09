@@ -281,6 +281,9 @@ PRODUCT_PACKAGES += \
 # QRNGD
 PRODUCT_PACKAGES += qrngd
 
+PRODUCT_COPY_FILES := \
+    device/lge/mako/99kernel:system/etc/init.d/99kernel
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # This is the mako-specific audio package

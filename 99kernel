@@ -1,0 +1,30 @@
+#!/system/xbin/sh
+
+# Sweep2Wake
+# possible values:
+# 0 = off
+# 1 = on
+SWEEP2WAKE=0
+
+# Doubletap2Wake
+# possible values:
+# 0 = off
+# 1 = on
+DOUBLETAP2WAKE=0
+
+# Sweep2Wake_Sweep2SleepOnly
+# possible values:
+# 0 = off
+# 1 = on
+SWEEP2SLEEP=0
+
+### DO NOT CHANGE ANYTHING BELLOW THIS LINE! ###
+
+$L "setting sweep2wake to ${SWEEP2WAKE}"
+echo ${SWEEP2WAKE} > /sys/android_touch/sweep2wake
+
+$L "setting DoubleTap2Wake to ${DOUBLETAP2WAKE}"
+echo ${DOUBLETAP2WAKE} > /sys/android_touch/doubletap2wake
+
+$L "setting Sweep2Wake_Sweep2SleepOnly to ${SWEEP2SLEEP}"
+echo ${SWEEP2SLEEP} > /sys/android_touch/s2w_s2sonly
