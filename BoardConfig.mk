@@ -40,8 +40,8 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=mako lpj=
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
 
 # Try to build the kernel
-TARGET_KERNEL_SOURCE := kernel/google/bricked-mako-master
-TARGET_KERNEL_CONFIG := bricked_defconfig
+TARGET_KERNEL_SOURCE := kernel/google/msm
+TARGET_KERNEL_CONFIG := cyanogen_mako_defconfig
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
@@ -62,6 +62,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/mako/bluetooth
 
 # Use the CM PowerHAL
 TARGET_USES_CM_POWERHAL := true
+# Kernel handles input boosting
+TARGET_POWERHAL_NO_TOUCH_BOOST := true
 
 # FIXME: HOSTAPD-derived wifi driver
 BOARD_HAS_QCOM_WLAN := true
