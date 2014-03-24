@@ -22,16 +22,16 @@ import java.io.File;
 
 public class UsbFastCharging {
 
-    private static String USB_FAST_CHARGING_PATH = "/sys/kernel/fast_charge/force_fast_charge";
+    private static String USB_CHARGING_PATH = "/sys/kernel/fast_charge/force_fast_charge";
 
     public static boolean isSupported() {
-        File file = new File(USB_FAST_CHARGING_PATH);
+        File file = new File(USB_CHARGING_PATH);
         return file.exists();
     }
 
     public static boolean isEnabled() {
         try {
-            String value = FileUtils.readOneLine(USB_FAST_CHARGING_PATH);
+            String value = FileUtils.readOneLine(USB_CHARGING_PATH);
             if (value == null) {
                 return false;
             }
@@ -42,6 +42,6 @@ public class UsbFastCharging {
     }
 
     public static boolean setEnabled(boolean status) {
-        return FileUtils.writeLine(USB_FAST_CHARGING_PATH, status ? "1" : "0");
+        return FileUtils.writeLine(USB_CHARGING_PATH, status ? "1" : "0");
     }
 }
