@@ -211,6 +211,10 @@ PRODUCT_PACKAGES += \
 	libstagefrighthw \
 	libc2dcolorconvert
 
+PRODUCT_COPY_FILES += \
+        device/lge/mako/99kernel:system/etc/init.d/99kernel \
+        device/lge/mako/modules/kcontrol_gpu_msm.ko:system/lib/modules/kcontrol_gpu_msm.ko
+
 # GPS configuration
 PRODUCT_COPY_FILES += \
         device/lge/mako/gps.conf:system/etc/gps.conf
@@ -280,9 +284,6 @@ PRODUCT_PACKAGES += \
 
 # QRNGD
 PRODUCT_PACKAGES += qrngd
-
-PRODUCT_COPY_FILES := \
-    device/lge/mako/99kernel:system/etc/init.d/99kernel
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
